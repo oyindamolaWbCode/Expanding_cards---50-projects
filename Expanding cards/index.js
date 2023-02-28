@@ -13,3 +13,17 @@
 //     document.getElementById("stringdemo1").innerHTML = prt1;
 //     document.getElementById("stringdemo2").innerHTML = prt2;
 
+const slides = document.querySelectorAll(".slide");
+
+slides.forEach(slide => {
+    slide.addEventListener('click', () =>{
+        removeActiveClasses()
+        slide.classList.add('active')
+    })
+})
+
+function removeActiveClasses(){
+    slides.forEach(slide =>{
+        slide.classList.remove('active')
+    })
+}
